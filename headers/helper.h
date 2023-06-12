@@ -11,7 +11,7 @@
 #include "xinput_driver.h"
 
 // GP2040-CE Version (32 character limit)
-#define GP2040VERSION "v0.7.1"
+#define GP2040VERSION "v0.7.2"
 
 const std::string BUTTON_LABEL_UP = "Up";
 const std::string BUTTON_LABEL_DOWN = "Down";
@@ -52,5 +52,7 @@ const std::string BUTTON_LABEL_A2 = "A2";
 #ifndef PLED_COLOR
 #define PLED_COLOR ColorWhite // White
 #endif
+
+static inline bool isValidPin(int32_t pin) { return pin >= 0 && pin < NUM_BANK0_GPIOS; }
 
 #endif
