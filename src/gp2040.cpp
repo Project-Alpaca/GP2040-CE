@@ -20,6 +20,7 @@
 #include "addons/slider_socd.h"
 #include "addons/wiiext.h"
 #include "addons/snes_input.h"
+#include "addons/i2clkp.h"
 
 // Pico includes
 #include "pico/bootrom.h"
@@ -111,6 +112,7 @@ void GP2040::setup() {
 	addons.LoadAddon(new SNESpadInput(), CORE0_INPUT);
 	addons.LoadAddon(new PlayerNumAddon(), CORE0_USBREPORT);
 	addons.LoadAddon(new SliderSOCDInput(), CORE0_INPUT);
+	addons.LoadAddon(new I2CLKPInput(), CORE0_INPUT);
 }
 
 void GP2040::run() {

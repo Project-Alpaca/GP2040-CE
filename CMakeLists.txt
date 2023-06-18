@@ -124,6 +124,7 @@ src/addons/extra_button.cpp
 src/addons/i2canalog1219.cpp
 src/addons/jslider.cpp
 src/addons/i2cdisplay.cpp
+src/addons/i2clkp.cpp
 src/addons/neopicoleds.cpp
 src/addons/playernum.cpp
 src/addons/playerleds.cpp

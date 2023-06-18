@@ -944,6 +944,9 @@ std::string setAddonOptions()
 	docToPin(snesOptions.latchPin, doc, "snesPadLatchPin");
 	docToPin(snesOptions.dataPin, doc, "snesPadDataPin");
 
+	auto& lkpOptions = Storage::getInstance().getAddonOptions().lkpOptions;
+	docToValue(lkpOptions.enabled, doc, "I2CLKPAddonEnabled");
+
 	Storage::getInstance().save();
 
 	return serialize_json(doc);
@@ -1153,6 +1156,8 @@ std::string getAddonOptions()
 	writeDoc(doc, "snesPadDataPin", cleanPin(snesOptions.dataPin));
 	writeDoc(doc, "SNESpadAddonEnabled", snesOptions.enabled);
 
+	const auto& lkpOptions = Storage::getInstance().getAddonOptions().lkpOptions;
+	writeDoc(doc, "I2CLKPAddonEnabled", lkpOptions.enabled);
 	return serialize_json(doc);
 }
 

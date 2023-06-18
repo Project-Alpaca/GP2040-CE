@@ -376,6 +376,11 @@ message SNESOptions
 	optional int32 dataPin = 4;
 }
 
+message LKPOptions
+{
+	optional bool enabled = 1;
+}
+
 message AddonOptions
 {
 	optional BootselButtonOptions bootselButtonOptions = 1;
@@ -393,6 +398,7 @@ message AddonOptions
 	optional WiiOptions wiiOptions = 13;
 	optional SOCDSliderOptions socdSliderOptions = 14;
 	optional SNESOptions snesOptions = 15;
+	optional LKPOptions lkpOptions = 16;
 }
 
 message Config

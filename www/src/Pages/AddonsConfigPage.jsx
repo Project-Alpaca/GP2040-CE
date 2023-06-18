@@ -1637,6 +1637,22 @@ export default function AddonsConfigPage() {
 							onChange={(e) => {handleCheckbox("SNESpadAddonEnabled", values); handleChange(e);}}
 						/>
 					</Section>
+					<Section title="LKP Project DIVA™️ Slider Extension Configuration">
+						<div
+							id="I2CLKPAddonOptions"
+							hidden={!values.I2CLKPAddonEnabled}>
+							{/* TODO Detailed configs here */}
+						</div>
+						<FormCheck
+							label="Enabled"
+							type="switch"
+							id="I2CLKPButton"
+							reverse
+							isInvalid={false}
+							checked={Boolean(values.I2CLKPAddonEnabled)}
+							onChange={(e) => {handleCheckbox("I2CLKPAddonEnabled", values); handleChange(e);}}
+						/>
+					</Section>
 					<div className="mt-3">
 						<Button type="submit" id="save">Save</Button>
 						{saveMessage ? <span className="alert">{saveMessage}</span> : null}
