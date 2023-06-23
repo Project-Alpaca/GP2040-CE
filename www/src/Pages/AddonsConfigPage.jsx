@@ -1893,7 +1893,7 @@ export default function AddonsConfigPage() {
 							onChange={(e) => { handleCheckbox("KeyboardHostAddonEnabled", values); handleChange(e);}}
 						/>
 					</Section>
-					<Section title="LKP Capacitive Slider Extension Configuration">
+					<Section title="LKP Capacitive Slider Configuration">
 						<div
 							id="I2CLKPAddonOptions"
 							hidden={!values.I2CLKPAddonEnabled}>
